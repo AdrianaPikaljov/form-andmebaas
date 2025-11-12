@@ -45,15 +45,16 @@
             this.puhasta_btn = new System.Windows.Forms.Button();
             this.otsifail_btn = new System.Windows.Forms.Button();
             this.kat_box = new System.Windows.Forms.ComboBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.toode_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // toode_pb
             // 
-            this.toode_pb.Location = new System.Drawing.Point(401, 12);
+            this.toode_pb.Location = new System.Drawing.Point(334, 12);
             this.toode_pb.Name = "toode_pb";
-            this.toode_pb.Size = new System.Drawing.Size(387, 209);
+            this.toode_pb.Size = new System.Drawing.Size(454, 209);
             this.toode_pb.TabIndex = 0;
             this.toode_pb.TabStop = false;
             this.toode_pb.Click += new System.EventHandler(this.toode_pb_Click);
@@ -103,6 +104,10 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(719, 191);
             this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseEnter);
+            this.dataGridView1.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseLeave);
+
             // 
             // Toode_txt
             // 
@@ -153,6 +158,7 @@
             this.lisa_btn.TabIndex = 12;
             this.lisa_btn.Text = "Lisa";
             this.lisa_btn.UseVisualStyleBackColor = true;
+            this.lisa_btn.Click += new System.EventHandler(this.lisa_btn_Click);
             // 
             // uuenda_btn
             // 
@@ -250,6 +256,7 @@
         private System.Windows.Forms.Button puhasta_btn;
         private System.Windows.Forms.Button otsifail_btn;
         private System.Windows.Forms.ComboBox kat_box;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
