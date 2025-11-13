@@ -46,15 +46,16 @@
             this.otsifail_btn = new System.Windows.Forms.Button();
             this.kat_box = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.naita_kat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.toode_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // toode_pb
             // 
-            this.toode_pb.Location = new System.Drawing.Point(334, 12);
+            this.toode_pb.Location = new System.Drawing.Point(293, 2);
             this.toode_pb.Name = "toode_pb";
-            this.toode_pb.Size = new System.Drawing.Size(454, 209);
+            this.toode_pb.Size = new System.Drawing.Size(495, 301);
             this.toode_pb.TabIndex = 0;
             this.toode_pb.TabStop = false;
             this.toode_pb.Click += new System.EventHandler(this.toode_pb_Click);
@@ -100,14 +101,13 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(80, 259);
+            this.dataGridView1.Location = new System.Drawing.Point(80, 308);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(719, 191);
+            this.dataGridView1.Size = new System.Drawing.Size(708, 258);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseEnter);
             this.dataGridView1.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseLeave);
-
             // 
             // Toode_txt
             // 
@@ -132,7 +132,7 @@
             // 
             // lisa_kat_btn
             // 
-            this.lisa_kat_btn.Location = new System.Drawing.Point(6, 157);
+            this.lisa_kat_btn.Location = new System.Drawing.Point(6, 136);
             this.lisa_kat_btn.Name = "lisa_kat_btn";
             this.lisa_kat_btn.Size = new System.Drawing.Size(98, 36);
             this.lisa_kat_btn.TabIndex = 10;
@@ -142,7 +142,7 @@
             // 
             // kustuta_kat_btn
             // 
-            this.kustuta_kat_btn.Location = new System.Drawing.Point(110, 157);
+            this.kustuta_kat_btn.Location = new System.Drawing.Point(110, 136);
             this.kustuta_kat_btn.Name = "kustuta_kat_btn";
             this.kustuta_kat_btn.Size = new System.Drawing.Size(108, 36);
             this.kustuta_kat_btn.TabIndex = 11;
@@ -152,7 +152,7 @@
             // 
             // lisa_btn
             // 
-            this.lisa_btn.Location = new System.Drawing.Point(6, 259);
+            this.lisa_btn.Location = new System.Drawing.Point(6, 308);
             this.lisa_btn.Name = "lisa_btn";
             this.lisa_btn.Size = new System.Drawing.Size(68, 19);
             this.lisa_btn.TabIndex = 12;
@@ -162,34 +162,37 @@
             // 
             // uuenda_btn
             // 
-            this.uuenda_btn.Location = new System.Drawing.Point(6, 284);
+            this.uuenda_btn.Location = new System.Drawing.Point(6, 333);
             this.uuenda_btn.Name = "uuenda_btn";
             this.uuenda_btn.Size = new System.Drawing.Size(68, 19);
             this.uuenda_btn.TabIndex = 13;
             this.uuenda_btn.Text = "Uuenda";
             this.uuenda_btn.UseVisualStyleBackColor = true;
+            this.uuenda_btn.Click += new System.EventHandler(this.uuenda_btn_Click);
             // 
             // kustuta_btn
             // 
-            this.kustuta_btn.Location = new System.Drawing.Point(6, 309);
+            this.kustuta_btn.Location = new System.Drawing.Point(6, 358);
             this.kustuta_btn.Name = "kustuta_btn";
             this.kustuta_btn.Size = new System.Drawing.Size(68, 19);
             this.kustuta_btn.TabIndex = 14;
             this.kustuta_btn.Text = "Kustuta";
             this.kustuta_btn.UseVisualStyleBackColor = true;
+            this.kustuta_btn.Click += new System.EventHandler(this.kustuta_btn_Click);
             // 
             // puhasta_btn
             // 
-            this.puhasta_btn.Location = new System.Drawing.Point(6, 334);
+            this.puhasta_btn.Location = new System.Drawing.Point(6, 383);
             this.puhasta_btn.Name = "puhasta_btn";
             this.puhasta_btn.Size = new System.Drawing.Size(68, 19);
             this.puhasta_btn.TabIndex = 15;
             this.puhasta_btn.Text = "Puhasta";
             this.puhasta_btn.UseVisualStyleBackColor = true;
+            this.puhasta_btn.Click += new System.EventHandler(this.puhasta_btn_Click);
             // 
             // otsifail_btn
             // 
-            this.otsifail_btn.Location = new System.Drawing.Point(720, 227);
+            this.otsifail_btn.Location = new System.Drawing.Point(293, 281);
             this.otsifail_btn.Name = "otsifail_btn";
             this.otsifail_btn.Size = new System.Drawing.Size(68, 21);
             this.otsifail_btn.TabIndex = 16;
@@ -206,11 +209,22 @@
             this.kat_box.TabIndex = 17;
             this.kat_box.SelectedIndexChanged += new System.EventHandler(this.kat_box_SelectedIndexChanged);
             // 
+            // naita_kat
+            // 
+            this.naita_kat.Location = new System.Drawing.Point(6, 178);
+            this.naita_kat.Name = "naita_kat";
+            this.naita_kat.Size = new System.Drawing.Size(102, 32);
+            this.naita_kat.TabIndex = 18;
+            this.naita_kat.Text = "Näita kategooriat";
+            this.naita_kat.UseVisualStyleBackColor = true;
+            this.naita_kat.Click += new System.EventHandler(this.naita_kat_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(909, 579);
+            this.Controls.Add(this.naita_kat);
             this.Controls.Add(this.kat_box);
             this.Controls.Add(this.otsifail_btn);
             this.Controls.Add(this.puhasta_btn);
@@ -257,6 +271,7 @@
         private System.Windows.Forms.Button otsifail_btn;
         private System.Windows.Forms.ComboBox kat_box;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button naita_kat;
     }
 }
 
